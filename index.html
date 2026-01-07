@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Luck! ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Warna background cream lembut */
+            background-color: #fdfbf7;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(226, 196, 196, 0.3);
+            max-width: 320px;
+            width: 85%;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gif-container {
+            width: 100%;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            /* === UPDATE GIF DI SINI === */
+            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHNmMG13azJjZmF1NjVmamo2YmNscTg5a2dleDBzYXc4MXVlc3c5ZCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/MDJ9IbxxvDUQM/giphy.gif'); 
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #fff0f0;
+        }
+
+        h1 {
+            color: #ff9a9e;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #888;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Styling Tombol yang Estetik */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            margin: 12px 0;
+            border-radius: 50px; 
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        /* Tombol Spotify (Warna Pastel Green) */
+        .spotify-btn {
+            background-color: #e2f0cb; 
+            color: #5f7d38;
+        }
+        .spotify-btn:hover { background-color: #cce3a8; }
+
+        /* Tombol WhatsApp (Warna Pastel Blue) */
+        .wa-btn {
+            background-color: #c7ceea;
+            color: #596285;
+        }
+        .wa-btn:hover { background-color: #b2bce6; }
+
+        .hidden-area {
+            display: none;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .main-btn {
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="gif-container"></div>
+        
+        <h1>Semangat ya!</h1>
+        
+        <p>
+            Belajarnya pelan-pelan aja.<br>
+            Jangan lupa minum air putih.<br>
+            Aku tau kamu pasti bisa! 🤍
+        </p>
+
+        <button class="btn main-btn" onclick="showSurprise(this)">Tap for support ✨</button>
+
+        <div id="links" class="hidden-area">
+            <p style="font-size: 13px; margin-bottom: 10px; margin-top:20px;">Dengerin ini biar rileks:</p>
+            
+            <a href="https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM" target="_blank" class="btn spotify-btn">
+                🎵 Playlist Semangat
+            </a>
+
+            <a href="https://wa.me/6285606036795?text=sayang%2C%20aku%20udah%20selesai." target="_blank" class="btn wa-btn">
+                💬 Kalau udah selesai klik ini
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function showSurprise(button) {
+            var links = document.getElementById("links");
+            links.style.display = "block";
+            button.style.display = "none"; 
+        }
+    </script>
+</body>
+</html>
